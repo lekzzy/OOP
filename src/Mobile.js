@@ -87,3 +87,33 @@ export default class Mobile {
 }
 
 
+class Samsung extends Mobile{
+	constuctor(name, opSys)
+	{
+		super(name, opSys);
+	}
+
+	return super.configuration();
+	return this.opSys;
+}
+
+
+class Nokia extends Mobile{
+	constuctor(name, opSys)
+	{
+		super(name, opSys);
+	}
+
+	return super.configuration();
+	return this.opSys;
+}
+
+class Nokia extends Mobile{
+	constuctor(name, opSys)
+	{
+		super(name, opSys);
+	}
+
+	return super.configuration();
+	return this.opSys;
+}
