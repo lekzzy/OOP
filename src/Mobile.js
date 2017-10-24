@@ -1,12 +1,41 @@
 export default class Mobile {
 
-	constuctor(name)
+	iEMICode = "IEMI Code - IEDF34343435235"
+	    processorSpeed = "2.10GHz";
+	    camera = "21MP";
+
+	constuctor(name, opSys)
 	{
 
 		this.name = name;
-		iEMICode = "IEMI Code - IEDF34343435235"
-	    processorSpeed = "2.10GHz";
-	    camera = "21MP";
+		this.opSys = name;
+		
+
+	    get name()
+	    {
+	    return this._name;
+		}
+
+	    set name(value) {
+	    	if (typeof value !== 'string') {
+	    		throw new Error('"name" must be a string.');
+	    	}
+
+        this._name = value;
+       }
+
+       get opSys()
+	    {
+	    return this._opSys;
+		}
+
+	    set opSys(value) {
+	    	if (typeof value !== 'string') {
+	    		throw new Error('"name" must be a string.');
+	    	}
+
+        this._opSys = value;
+       }
 
 	}
 
@@ -33,7 +62,7 @@ export default class Mobile {
 		blueToothType ["8.0.11b", "8.0.11n", "8.0.11g/n"]
 		if(this.name === "samsung")
 		{
-			return blueToothType;	
+			return blueToothType[0];	
 		}
 
 		else if(this.name === "Iphone")
@@ -50,10 +79,11 @@ export default class Mobile {
 
 	configuration()
 	{
-		let prop = this.name + " has " + "IEMI Code" + iEMICode + " , Processor " + processorSpeed + simCard() + " Sim Card" + blueToothType() +" Bluetooth Type" + " and " + camera + "Camera");
+		let prop = this.name + " has " + "IEMI Code " + iEMICode + ", Processor " + processorSpeed +"," + simCard() + " Sim Card " + blueToothType() +" Bluetooth Type" + " and " + camera + " Camera");
 		return prop;
 		
 	}
 	
 }
+
 
